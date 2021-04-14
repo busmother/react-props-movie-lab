@@ -17,7 +17,7 @@ export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
     return movieData.map((movie, index) => <MovieCard
-          key={index}
+          key={index} // this is React-imposed feature
           title={movie.title}
           IMDBRating ={movie.IMDBRatimg}
           genres = {movie.genres}
@@ -28,15 +28,10 @@ export default class MovieShowcase extends Component {
   render() {
     return (
       <div id="movie-showcase">
-        {this.generateMovieCards()}
+         {this.generateMovieCards()}
       </div>
     )
   }
 }
 
-MovieCard.defaultProps = {
-  title: 'Unknown',
-  IMDBRating: null,
-  genres: 'No Genre(s) Found',
-  posterSrc: 'default'
-} 
+
