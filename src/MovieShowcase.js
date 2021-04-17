@@ -4,22 +4,11 @@ import movieData from './data.js'
 
 export default class MovieShowcase extends Component {
 
-  // generateMovieCards = () => {
-  //   movieData.forEach(movie => {
-  //       return (
-  //         MovieCard.title = movie.title,
-  //         MovieCard.IMDBRating = movie.IMDBRating,
-  //         MovieCard.genres = movie.genres,
-  //         MovieCard.poster = movie.poster
-  //       )
-  //   })
-  // }
-
   generateMovieCards = () => {
     return movieData.map((movie, index) => <MovieCard
           key={index} // this is React-imposed feature
           title={movie.title}
-          IMDBRating ={movie.IMDBRatimg}
+          IMDBRating ={movie.IMDBRating}
           genres = {movie.genres}
           poster = {movie.poster}
     />)
